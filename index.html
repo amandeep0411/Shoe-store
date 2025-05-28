@@ -1,0 +1,75 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shoe Store</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Shoe Store</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="cart.html">Cart</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Step into Style</h2>
+      <p>Discover the latest Nike sneakers crafted for comfort and performance.</p>
+      <a href="#products" class="btn-primary">Shop Now</a>
+    </div>
+  </section>
+
+  <section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="pic1.avif">
+        <h3>Nike Air Force</h3>
+        <p>$120</p>
+        <button onclick='addToCart({ "name": "Nike Air Force", "price": 120 })'>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="pic2.jpg" alt="Air Jordan">
+        <h3>Air Jordan</h3>
+        <p>$150</p>
+        <button onclick='addToCart({ "name": "Air Jordan", "price": 150 })'>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="pic3.jpg" alt="Nike Blazer">
+        <h3>Nike Blazer</h3>
+        <p>$110</p>
+        <button onclick='addToCart({ "name": "Nike Blazer", "price": 110 })'>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Your Email" required/>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit" class="btn-primary">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shoe Store. All rights reserved.</p>
+  </footer>
+  <script src="cart.js" defer></script>
+</body>
+</html>
+
+
+
+
