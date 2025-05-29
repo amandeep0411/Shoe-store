@@ -1,69 +1,105 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shoe Store</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <div class="logo">Shoe Store</div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Cart</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
+    <h1>Shoe Store</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="cart.html">Cart</a>
+      <a href="login.html">Login</a>
     </nav>
-    <div class="hero">
-      <h1>Step into Style</h1>
-      <p>Discover the latest Nike sneakers crafted for comfort and performance.</p>
-      <a href="#" class="btn">Shop Now</a>
-    </div>
   </header>
 
-  <main>
-    <section class="products">
-      <h2>Our Products</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="pic1.avif" alt="Nike Air Force" />
-          <h3>Nike Air Force</h3>
-          <p>$120</p>
-          <button>Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="pic2.jpg" alt="Air Jordan" />
-          <h3>Air Jordan</h3>
-          <p>$150</p>
-          <button>Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="pic3.jpg" alt="Nike Blazer" />
-          <h3>Nike Blazer</h3>
-          <p>$110</p>
-          <button>Add to Cart</button>
-        </div>
-      </div>
-    </section>
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Step into Style</h2>
+      <p>Discover the latest Nike sneakers crafted for comfort and performance.</p>
+      <a href="#products" class="btn-primary">Shop Now</a>
+    </div>
+  </section>
 
-    <section class="contact">
-      <h2>Contact Us</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
+  <section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="pic1.avif">
+        <h3>Nike Air Force</h3>
+        <p>$120</p>
+        <button onclick='addToCart({ "name": "Nike Air Force", "price": 120 })'>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="pic2.jpg" alt="Air Jordan">
+        <h3>Air Jordan</h3>
+        <p>$150</p>
+        <button onclick='addToCart({ "name": "Air Jordan", "price": 150 })'>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="pic3.jpg" alt="Nike Blazer">
+        <h3>Nike Blazer</h3>
+        <p>$110</p>
+        <button onclick='addToCart({ "name": "Nike Blazer", "price": 110 })'>Add to Cart</button>
+      </div>
+       <div class="product">
+        <img src="pic4.avif">
+        <h3>Nike Dunk High</h3>
+        <p>$180</p>
+        <button onclick='addToCart({ "name": "Nike Air Force", "price": 120 })'>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="pic5.jpg" alt="Air Jordan">
+        <h3>Nike Air Zoom </h3>
+        <p>$170</p>
+        <button onclick='addToCart({ "name": "Air Jordan", "price": 150 })'>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="pic6.avif" alt="Nike Blazer">
+        <h3>Nike Air Max </h3>
+        <p>$200</p>
+        <button onclick='addToCart({ "name": "Nike Blazer", "price": 110 })'>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="pic7.avif" alt="Air Jordan">
+        <h3>Nike Air Max Nuaxis </h3>
+        <p>$220</p>
+        <button onclick='addToCart({ "name": "Air Jordan", "price": 150 })'>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="pic8.avif" alt="Nike Blazer">
+        <h3>Men Air Max Running </h3>
+        <p>$210</p>
+        <button onclick='addToCart({ "name": "Nike Blazer", "price": 110 })'>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Your Email" required/>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit" class="btn-primary">Send</button>
+    </form>
+  </section>
 
   <footer>
-    <p>© 2025 Shoe Store. All rights reserved.</p>
+    <p>&copy; 2025 Shoe Store. All rights reserved.</p>
   </footer>
+  <script src="cart.js" defer></script>
 </body>
 </html>
+
+
+
 
